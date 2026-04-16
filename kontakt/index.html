@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kontakt — demo kartica</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <span class="brand">Studio Linija</span>
+      <nav class="nav" aria-label="Brza navigacija">
+        <a href="#kontakt">Kontakt</a>
+        <a
+          href="https://developer.mozilla.org/hr/docs/Web/HTML"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          MDN — referenca za HTML (otvara se u novoj kartici)
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Kontakt i informacije</h1>
+      <p class="lead">
+        Demo stranica za testiranje tiketa: kartica s kontaktom i sažetim opisom
+        ponude, bez backend logike.
+      </p>
+
+      <section class="panel" aria-labelledby="o-nama">
+        <h2 id="o-nama">O nama</h2>
+        <p>
+          Mali tim za dizajn i jednostavne web prezentacije. Radimo statičke
+          stranice koje se lako hostaju i brzo učitavaju. Više o strukturiranom
+          sadržaju na
+          <a
+            class="inline-link"
+            href="https://www.w3.org/WAI/tutorials/page-structure/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="W3C vodič za strukturu stranice i pristupačnost (eng.)"
+          >
+            W3C — struktura stranice
+          </a>.
+        </p>
+      </section>
+
+      <section class="panel" aria-labelledby="sto-nudimo">
+        <h2 id="sto-nudimo">Što nudimo</h2>
+        <ul class="feature-list">
+          <li>Jednostranične prezentacije u čistom HTML-u i CSS-u</li>
+          <li>Prilagodba tipografije i boja prema vašem brendu</li>
+          <li>Osnovna pristupačnost: semantika, fokus, čitljiv kontrast</li>
+        </ul>
+      </section>
+
+      <section class="panel" id="kontakt" aria-labelledby="kontakt-naslov">
+        <h2 id="kontakt-naslov">Kontakt</h2>
+        <p>
+          Radno vrijeme: radnim danom 9–17 h. Adresa je fiktivna — služi samo za
+          demo prikaz kartice.
+        </p>
+        <form class="contact-form" action="#" method="get">
+          <label for="email">E-mail za obavijesti (demo GET)</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="vi@primjer.hr"
+            autocomplete="email"
+          />
+          <button type="submit">Pošalji</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Demo kartica · HTML + CSS · bez build koraka</p>
+    </footer>
+  </body>
+</html>
