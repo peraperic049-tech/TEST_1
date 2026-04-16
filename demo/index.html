@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Demo bilješke — test aplikacija</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <span class="logo">DemoNotes</span>
+      <nav class="nav" aria-label="Glavna navigacija">
+        <a href="#sadrzaj">Sadržaj</a>
+        <a href="#info">Info</a>
+      </nav>
+    </header>
+
+    <main id="sadrzaj">
+      <h1>Brza bilješka</h1>
+      <p class="lead">
+        Jednostavna HTML/CSS stranica za testiranje tiketa i kriterija prihvaćanja.
+      </p>
+
+      <section class="card" aria-labelledby="form-naslov">
+        <h2 id="form-naslov">Nova bilješka</h2>
+        <form class="note-form" action="#" method="get">
+          <label class="visually-hidden" for="note-text">Tekst bilješke</label>
+          <input
+            id="note-text"
+            name="q"
+            type="text"
+            placeholder="Upiši bilješku (GET samo za demo)…"
+            autocomplete="off"
+          />
+          <button class="btn" type="submit">Spremi</button>
+        </form>
+        <details>
+          <summary>Kako ovo testirati?</summary>
+          <p class="hint">
+            Klik na „Spremi” šalje upit na istu stranicu s parametrom u adresnoj traci — bez
+            backenda, samo za provjeru forme i stilova.
+          </p>
+        </details>
+      </section>
+
+      <section class="card" id="info" aria-labelledby="info-naslov">
+        <h2 id="info-naslov">Što je ovo</h2>
+        <p class="hint">
+          Statički sadržaj, vanjski CSS, tamna tema s CSS varijablama i responzivnim layoutom.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Demo · HTML + CSS · za testiranje</p>
+    </footer>
+  </body>
+</html>
