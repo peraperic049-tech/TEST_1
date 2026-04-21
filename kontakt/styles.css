@@ -1,0 +1,259 @@
+:root {
+  --bg: #f4f0e8;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --muted: #57534e;
+  --accent: #b45309;
+  --accent-soft: #fff7ed;
+  --radius: 12px;
+  --shadow: 0 12px 40px rgba(28, 25, 23, 0.08);
+  --font: "Georgia", "Times New Roman", serif;
+  --font-ui: "Segoe UI", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: clip;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-ui);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  padding: 0.45rem 0.9rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: calc(var(--radius) - 6px);
+  transform: translateY(-200%);
+  transition: transform 0.15s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skip-link {
+    transition: none;
+  }
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--surface);
+  border-bottom: 2px solid var(--accent-soft);
+}
+
+.brand {
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.nav a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3.5rem;
+  scroll-margin-top: 1rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+h1 {
+  font-family: var(--font);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.lead {
+  margin: 0 0 2rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid rgba(180, 83, 9, 0.2);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.35rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.panel h2 {
+  font-family: var(--font);
+  font-size: 1.15rem;
+  margin: 0 0 0.75rem;
+  color: var(--text);
+}
+
+.panel p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.feature-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--muted);
+}
+
+.feature-list li {
+  margin-bottom: 0.35rem;
+}
+
+.feature-list li:last-child {
+  margin-bottom: 0;
+}
+
+.inline-link {
+  font-weight: 600;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.contact-form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.contact-form input {
+  width: 100%;
+  max-width: 22rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid rgba(28, 25, 23, 0.2);
+  border-radius: calc(var(--radius) - 4px);
+  font: inherit;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.contact-form input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  padding: 0.6rem 1.35rem;
+  border: none;
+  border-radius: calc(var(--radius) - 4px);
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.contact-form button:hover {
+  filter: brightness(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-form button {
+    transition: none;
+  }
+}
+
+.contact-form button:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+.site-footer {
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+  background: var(--surface);
+  border-top: 1px solid rgba(180, 83, 9, 0.15);
+}
+
+.site-footer code {
+  font-size: 0.8em;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+@media (min-width: 480px) {
+  .contact-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  .contact-form label {
+    flex: 1 1 100%;
+  }
+
+  .contact-form input {
+    flex: 1 1 12rem;
+  }
+}
