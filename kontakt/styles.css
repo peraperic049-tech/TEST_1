@@ -22,12 +22,41 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   min-height: 100vh;
   font-family: var(--font-ui);
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  padding: 0.45rem 0.9rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: calc(var(--radius) - 6px);
+  transform: translateY(-200%);
+  transition: transform 0.15s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skip-link {
+    transition: none;
+  }
 }
 
 a {
@@ -78,6 +107,11 @@ main {
   max-width: 40rem;
   margin: 0 auto;
   padding: 2rem 1.25rem 3.5rem;
+  scroll-margin-top: 1rem;
+}
+
+main:focus {
+  outline: none;
 }
 
 h1 {
@@ -173,10 +207,17 @@ h1 {
   font: inherit;
   font-weight: 600;
   cursor: pointer;
+  transition: filter 0.15s ease;
 }
 
 .contact-form button:hover {
   filter: brightness(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-form button {
+    transition: none;
+  }
 }
 
 .contact-form button:focus-visible {
@@ -191,6 +232,14 @@ h1 {
   color: var(--muted);
   background: var(--surface);
   border-top: 1px solid rgba(180, 83, 9, 0.15);
+}
+
+.site-footer code {
+  font-size: 0.8em;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background: var(--accent-soft);
+  color: var(--text);
 }
 
 @media (min-width: 480px) {

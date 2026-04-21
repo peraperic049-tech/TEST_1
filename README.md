@@ -1,3 +1,5 @@
 # TEST_1
 
-test for code merlin standalone app
+Test repozitorij za statičke demoe.
+
+- **`kontakt/`** — demo „kontakt kartica”: otvori `kontakt/index.html` u pregledniku (nije potreban build).
